@@ -11,10 +11,11 @@ import dk.lgr.roombookingmvvm.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
 
+    val viewModel:LoginViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val mBinding:ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
-        val viewModel:LoginViewModel by viewModels()
         mBinding.viewModel = viewModel
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

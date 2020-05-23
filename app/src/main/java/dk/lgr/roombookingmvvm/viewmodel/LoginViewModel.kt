@@ -8,8 +8,8 @@ import dk.lgr.roombookingmvvm.UserInfo
 class LoginViewModel: ViewModel() {
 
     private val isLoggedIn = MutableLiveData<Boolean>()
-    val email:String =""
-    val password:String = ""
+    var email:String =""
+    var password:String = ""
 
     fun onLogin(){
         UserInfo.login(email)
